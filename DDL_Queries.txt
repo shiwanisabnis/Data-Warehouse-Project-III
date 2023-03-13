@@ -1,0 +1,62 @@
+CREATE TABLE Location (
+Location_id int,
+Region Varchar (50),
+country varchar (50)
+);
+
+
+CREATE TABLE Time (
+t_id int,
+month Varchar (50),
+year varchar (50)
+);
+
+
+CREATE TABLE Target_group(
+trg_id int,
+age_group Varchar (50)
+);
+
+CREATE TABLE Vaccine (
+vac_id int,
+name Varchar (50)
+);
+
+CREATE TABLE Virus (
+V_id int,
+name Varchar (50),
+family Varchar (50),
+type Varchar (50),
+Infection-Rate Varchar (50)
+);
+
+CREATE TABLE ICU (
+FOREIGN KEY (L-ID),
+FOREIGN KEY (T-ID),
+Indicator Varchar (50),
+Source Varchar (50),
+ICU-cases Varchar (50),
+);
+
+CREATE TABLE Pandemic (
+FOREIGN KEY (L-ID),
+FOREIGN KEY (T-ID),
+FOREIGN KEY (V-ID),
+Current-Cases Varchar (50),
+New-Cases Varchar (50),
+Recovered Varchar (50),
+Deaths Varchar (50),
+);
+
+CREATE TABLE Vaccination (
+FOREIGN KEY (L-ID),
+FOREIGN KEY (T-ID),
+FOREIGN KEY (Vac-ID),
+FOREIGN KEY (Teg-ID),
+Doses-Received Varchar (50),
+First-Dose Varchar (50),
+Second-Dose Varchar (50),
+Third-Dose Varchar (50),
+);
+
+
